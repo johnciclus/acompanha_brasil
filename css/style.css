@@ -27,8 +27,8 @@
 }
 
 .logo {
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .logo h2{
@@ -43,7 +43,7 @@
 }
 
 .nav-sidebar > li > a {
-  padding: 25px 20px;
+  padding: 15px 20px;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif";
   font-size: 16px;
 }
@@ -55,7 +55,7 @@
 
 
 .social-links{
-    margin-top: 40px;
+    margin-top: 15px;
 }
 
 /*

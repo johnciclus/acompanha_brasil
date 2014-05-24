@@ -41,13 +41,13 @@
               <h2>Acompanha Brasil</h2>
             </a>
           </div>
-          <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Inicio</a></li>
-            <li><a href="#">Artigos</a></li>
-            <li><a href="#">Projetos de lei</a></li>
-            <li><a href="#">Parlamentarios</a></li>
-            <li><a href="#">Partidos politicos</a></li>
-            <li><a href="#">Conosco</a></li>
+          <ul id="menu" class="nav nav-sidebar">
+            <li class="active"><a id="home" href="#">Inicio</a></li>
+            <li><a id="articles" href="#">Artigos</a></li>
+            <li><a id="law_projects" href="#">Projetos de lei</a></li>
+            <li><a id="parliamentaries" href="#">Parlamentarios</a></li>
+            <li><a id="political_parties" href="#">Partidos politicos</a></li>
+            <li><a id="about_us" href="#">Conosco</a></li>
           </ul>
           
           <div class="social-links">
@@ -65,68 +65,8 @@
             </a>
           </div>
         </div>
-        
-        <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 main">
-          <h1 class="page-header">Features</h1>
-          <div class="row featurette">
-            <div class="col-md-7">
-              <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-              <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-            </div>
-            <div class="col-md-5">
-              <img src="images/logo.png" alt="Logo" class="img-responsive" alt="Logo">
-            </div>
-          </div>
-    
-          <hr class="featurette-divider">
-    
-          <div class="row featurette">
-            <div class="col-md-5">
-              <img src="images/logo.png" alt="Logo" class="img-responsive" alt="Logo">
-            </div>
-            <div class="col-md-7">
-              <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-              <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-            </div>
-          </div>
-    
-          <hr class="featurette-divider">
-    
-          <div class="row featurette">
-            <div class="col-md-7">
-              <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-              <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-            </div>
-            <div class="col-md-5">
-              <img src="images/logo.png" alt="Logo" class="img-responsive" alt="Logo">
-            </div>
-          </div>
-    
-          <hr class="featurette-divider">
+        <div id="content" class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 main">
           
-          <div class="row featurette">
-            <div class="col-md-5">
-              <img src="images/logo.png" alt="Logo" class="img-responsive" alt="Logo">
-            </div>
-            <div class="col-md-7">
-              <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-              <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-            </div>
-          </div>
-    
-          <hr class="featurette-divider">
-    
-          <div class="row featurette">
-            <div class="col-md-7">
-              <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-              <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-            </div>
-            <div class="col-md-5">
-              <img src="images/logo.png" alt="Logo" class="img-responsive" alt="Logo">
-            </div>
-          </div>
-    
-          <hr class="featurette-divider">
         </div>
         <div class="col-sm-2 col-md-2 rightbar">
           <h1 class="page-header">Dashboard</h1>
@@ -139,5 +79,24 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          
+          function get_page(name){
+            $.get("pages/"+name+".html", function(data){
+              $("#content").html(data);
+            });
+          }
+          
+          $("#menu li a").click(function() {
+              get_page(this.id);
+          });
+          
+          get_page("home");
+          
+        });
+    
+    </script>
+    
   </body>
 </html>
