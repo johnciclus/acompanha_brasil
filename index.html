@@ -34,22 +34,39 @@
   <body>
     <div class="container-fluid">
       <div class="row">
+        
         <div class="col-sm-2 col-md-2 sidebar">
-          <div class="logo">
-            <a href="#">
-              <img src="images/logo.png" alt="Logo" class="img-responsive">
-              <h2>Acompanha Brasil</h2>
-            </a>
-          </div>
-          <ul id="menu" class="nav nav-sidebar">
-            <li class="active"><a id="home" href="#">Inicio</a></li>
-            <li><a id="articles" href="#">Artigos</a></li>
-            <li><a id="law_projects" href="#">Projetos de lei</a></li>
-            <li><a id="parliamentaries" href="#">Parlamentarios</a></li>
-            <li><a id="political_parties" href="#">Partidos politicos</a></li>
-            <li><a id="about_us" href="#">Conosco</a></li>
-          </ul>
           
+          <div class="sidebar-nav">
+            
+            <div id="navbar" class="navbar navbar-default" role="navigation">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <span class="visible-xs navbar-brand">Acompanha Brasil</span>
+              </div>
+              <div class="navbar-collapse collapse sidebar-navbar-collapse">
+                <div class="logo">
+                  <a href="#">
+                    <img src="images/logo.png" alt="Logo" class="img-responsive">
+                    <h2>Acompanha Brasil</h2>
+                  </a>
+                </div>
+                <ul id="menu" class="nav navbar-nav">
+                  <li class="active"><a id="home_link" href="#home">Inicio</a></li>
+                  <li><a id="articles_link" href="#articles">Artigos</a></li>
+                  <li><a id="law_projects_link" href="#law_projects">Projetos de lei</a></li>
+                  <li><a id="parliamentaries_link" href="#parliamentaries">Parlamentarios</a></li>
+                  <li><a id="political_parties_link" href="#political_parties">Partidos políticos</a></li>
+                  <li><a id="about_us_link" href="#about_us">Conosco</a></li>
+                </ul>
+              </div>
+            </div>  
+          </div>
           <div class="social-links">
             <a class="btn btn-social-icon btn-facebook">
               <i class="fa fa-facebook"></i>
@@ -65,12 +82,68 @@
             </a>
           </div>
         </div>
+        
         <div id="content" class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 main">
-          
-        </div>
-        <div class="col-sm-2 col-md-2 rightbar">
-          <h1 class="page-header">Dashboard</h1>
          
+        </div>
+        
+        <div class="col-sm-2 col-md-2 rightbar">
+          
+          <div class="section">
+            <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                <span class="glyphicon glyphicon-user"></span>
+                Nome de usuario
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="section">
+            <div class="input-group">
+              <input type="text" class="form-control">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">
+                  <span class="glyphicon glyphicon-search"></span>
+                </button>
+              </span>
+            </div>
+          </div>
+          
+          <div class="section">
+            <h4>Últimos projetos de lei</h4>
+            <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
+              <li><a href="#"><span class="badge">1 hora</span>Projeto 1</a></li>
+              <li><a href="#"><span class="badge">1 dia</span>Projeto 2</a></li>
+              <li><a href="#"><span class="badge">5 dias</span>Projeto 3</a></li>
+            </ul>
+          </div>
+          
+          <div class="section">
+            <h4>Os mais seguidos</h4>
+            <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
+              <li><a href="#"><span class="badge">2000</span>Nando Reis</a></li>
+              <li><a href="#"><span class="badge">1000</span>Rita Lee</a></li>
+              <li><a href="#"><span class="badge">500</span>Roberto Carlos</a></li>
+            </ul>
+          </div>
+          
+          <div class="section">
+            <h4>Os mais castigados</h4>
+            <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
+              <li><a href="#"><span class="badge">2500</span>Nando Reis</a></li>
+              <li><a href="#"><span class="badge">1250</span>Rita Lee</a></li>
+              <li><a href="#"><span class="badge">670</span>Roberto Carlos</a></li>
+            </ul>
+          </div>
+          
         </div>
       </div>
     </div>
@@ -81,15 +154,28 @@
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
+          var exist = false;
           
           function get_page(name){
-            $.get("pages/"+name+".html", function(data){
-              $("#content").html(data);
+            $.get("pages/"+name+".html", function(data, textStatus, jqXHR){
+              if(textStatus=='success'){
+                $("#content").html(data);
+                exist = true;
+              }
+              else{
+                exist = false;
+              }
             });
+            return exist;
           }
           
           $("#menu li a").click(function() {
-              get_page(this.id);
+              var idx = this.id.lastIndexOf('_');
+              var name = this.id.slice(0,idx);
+              if(get_page(name)){
+                $("#menu li").removeClass("active");
+                $("#"+name+"_link").parent().addClass("active");
+              }
           });
           
           get_page("home");
