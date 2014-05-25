@@ -52,12 +52,12 @@
     max-height: none;
   }
 
-  .sidebar-nav .navbar ul {
+  #main_menu {
     float: none;
     display: block;
   }
 
-  .sidebar-nav .navbar li {
+  #main_menu li {
     float: none;
     display: block;
   }
@@ -78,13 +78,13 @@
     border: none;
   }
   
-  .navbar-nav > .active > a {
+  .navbar-nav .active a {
     color: #fff;
     background-color: #428bca;
   }
     
-  .navbar-nav > .active > a:hover, 
-  .navbar-nav > .active > a:focus {
+  .navbar-nav .active a:hover, 
+  .navbar-nav .active a:focus {
     color: #157ab5;
   }
   
@@ -123,7 +123,7 @@
 
 .section{
   margin: 0px 0px 5px 0px;
-  padding: 5px 0px;
+  padding: 0px 0px 5px 0px;
 }
 
 .centered{
@@ -131,7 +131,22 @@
 }
 
 .no-margin{
-    margin: 0px;
+  margin: 0px;
+}
+
+.law_projects_logo{
+  float: left;
+  margin: 0px 10px;
+  width: 80px;
+  height: 80px;
+}
+
+.voting_icon{
+  font-size: 48px;
+}
+
+.voting_party_icon{
+  font-size: 18px;
 }
 
 #myCarousel{

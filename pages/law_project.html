@@ -1,0 +1,96 @@
+<div class="row">
+  <div class="col-md-8">
+    <h3>Medidas de  proteção  de  crianças e adolescentes</h3>
+    <p>
+      Quando   a   criança   ou  adolescente
+      comparecer   pessoalmente  para
+      formular   reclamação  de  maus
+      tratos   ou  qualquer  forma   de
+      violência  praticada   pelos   pais  ou
+      responsáveis.   
+    <p>
+    </p>
+      Os   conselhos   tutelares   estão
+      autorizados  requisar  documentos,
+      em  órgãos  públicos. 
+    <p>
+    </p>  
+      Quisque nec mauris  sit amet
+      elit  iaculis pretium sit amet  quis
+      magna.  Aenean  velit odio, elementum
+      in  tempus  ut, vehicula  eu  diam.
+      Pellentesque  rhoncus aliquam mattis.
+    <p>
+    </p>  
+      Ut  vulputate eros  sed felis sodales nec
+      vulputate justo hendrerit.  Vivamus
+      varius  pretium ligula, a aliquam odio
+      euismod sit amet. 
+    <p>
+    </p> 
+      Quisque laoreet sem
+      sit amet  orci  ullamcorper at  ultricies
+      metus viverra.  Pellentesque  arcu
+      mauris, malesuada quis  ornare
+      accumsan, blandit sed diam.
+    </p>
+    <p>
+      <i>Autora: </i><b>LILIAM  SÁ  DE  PAULA</b>   
+    </p> 
+    <p>
+      <i>Categoria: </i><b>Familia, Saude,  Pessoal</b>   
+    </p> 
+    
+    <div id="graph"></div>
+    
+    <a href="#">Fonte completa da informação</a>
+  </div>
+  <div class="col-md-4">
+    <div class="section">
+      <img src="images/childrens.jpg" class="img-responsive">  
+    </div>
+    
+    <div class="well">
+      <h4>Votar</h4>
+      <div class="form-group">
+        <button type="button" class="btn btn-primary btn-lg">Acordo</button>
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn btn-primary btn-lg">Discordo</button>
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn btn-primary btn-lg">Abstenção</button>
+      </div>  
+    </div>
+    
+    <div class="well">
+      <h4>Votaçoes do parlamento</h4>
+      <div class="form-group">
+        <button id="view_parliament_votes" type="button" class="btn btn-primary btn-lg">Votaçoes</button>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+
+  $(document).ready(function() {
+    Morris.Donut({
+      element: 'graph',
+      data: [
+        {value: 45, label: 'Acorda'},
+        {value: 45, label: 'Discorda'},
+        {value: 10, label: 'Abstenção'}
+      ],
+        formatter: function (x) { return x + "%"}
+      }).on('click', function(i, row){
+        console.log(i, row);
+      });
+    
+    $("#view_parliament_votes").click(function(){
+      get_page("parliament_votes");
+    });
+  });
+  
+</script>

@@ -51,18 +51,26 @@
                 </button>
                 <span class="visible-xs navbar-brand">Acompanha Brasil</span>
               </div>
-              <div class="navbar-collapse collapse sidebar-navbar-collapse">
+              <div class="collapse navbar-collapse">
                 <div class="logo">
                   <a href="#">
                     <img src="images/logo.png" alt="Logo" class="img-responsive">
                     <h2>Acompanha Brasil</h2>
                   </a>
                 </div>
-                <ul id="menu" class="nav navbar-nav">
+                <ul id="main_menu" class="nav navbar-nav">
                   <li class="active"><a id="home_link" href="#home">Inicio</a></li>
-                  <li><a id="articles_link" href="#articles">Artigos</a></li>
-                  <li><a id="law_projects_link" href="#law_projects">Projetos de lei</a></li>
+                  <li><a id="articles_link" href="#articles">Artigos</a></li>                  
+                  
                   <li><a id="parliamentaries_link" href="#parliamentaries">Parlamentarios</a></li>
+                  <li class="dropdown">
+                    <a id="law_projects_link" href="#" class="dropdown-toggle" data-toggle="dropdown">Projetos de lei<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a id="be_a_parlamentar_link" href="#be_a_parlamentar">Seja parlamentario</a></li>
+                      <li><a id="good_vote_link" href="#good_vote">Votaram bem</a></li>
+                    </ul>
+                  </li>
+                  
                   <li><a id="political_parties_link" href="#political_parties">Partidos políticos</a></li>
                   <li><a id="about_us_link" href="#about_us">Conosco</a></li>
                 </ul>
@@ -120,7 +128,7 @@
           </div>
           
           <div class="section">
-            <h4>Últimos projetos de lei</h4>
+            <h5>Últimos projetos de lei</h5>
             <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
               <li><a href="#"><span class="badge">1 hora</span>Projeto 1</a></li>
               <li><a href="#"><span class="badge">1 dia</span>Projeto 2</a></li>
@@ -129,7 +137,7 @@
           </div>
           
           <div class="section">
-            <h4>Os mais seguidos</h4>
+            <h5>Os mais seguidos</h5>
             <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
               <li><a href="#"><span class="badge">2000</span>Nando Reis</a></li>
               <li><a href="#"><span class="badge">1000</span>Rita Lee</a></li>
@@ -138,7 +146,7 @@
           </div>
           
           <div class="section">
-            <h4>Os mais castigados</h4>
+            <h5>Os mais castigados</h5>
             <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
               <li><a href="#"><span class="badge">2500</span>Nando Reis</a></li>
               <li><a href="#"><span class="badge">1250</span>Rita Lee</a></li>
@@ -158,33 +166,48 @@
     <script src="js/morris.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
-          var exist = false;
+          window.exist = false;
           
-          function get_page(name){
-            $.get("pages/"+name+".html", function(data, textStatus, jqXHR){
-              if(textStatus=='success'){
-                $("#content").html(data);
-                exist = true;
-              }
-              else{
-                exist = false;
-              }
-            });
-            return exist;
+          window.find_view = function(hash){
+            var view = hash.slice(1);
+            return view;
           }
           
-          $("#menu li a").click(function() {
-              var idx = this.id.lastIndexOf('_');
-              var name = this.id.slice(0,idx);
-              if(get_page(name)){
-                $("#menu li").removeClass("active");
-                $("#"+name+"_link").parent().addClass("active");
+          window.get_page = function(name){
+            $.get("pages/"+name+".html", function(data, textStatus, jqXHR){
+            
+              if(textStatus=='success'){
+                $("#content").html(data);
+                window.exist = true;
+              }
+              else{
+                window.exist = false;
+              }
+            });
+            
+            return window.exist;
+          }
+          
+          $("#main_menu li a").click(function() {
+              var name = $(this).attr('href').slice(1);
+              if(name){
+                if(get_page(name)){
+                  $("#main_menu li").removeClass("active");
+                  $("#"+name+"_link").parent().addClass("active");
+                }
               }
           });
           
-          console.log(window.location.pathname);
+          var view = find_view(window.location.hash);
           
-          get_page("home");
+          if(view){
+            if(!get_page(view)){
+              console.log(window.exist);
+            }
+          }
+          else{
+            get_page("home");
+          }
           
         });
     
