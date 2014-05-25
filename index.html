@@ -17,6 +17,8 @@
     
     <link href="css/bootstrap-social.css" rel="stylesheet" >
     
+    <link href="css/morris.css" rel="stylesheet" >
+    
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
     
@@ -152,6 +154,8 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/raphael-min.js"></script>
+    <script src="js/morris.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
           var exist = false;
@@ -177,6 +181,8 @@
                 $("#"+name+"_link").parent().addClass("active");
               }
           });
+          
+          console.log(window.location.pathname);
           
           get_page("home");
           
