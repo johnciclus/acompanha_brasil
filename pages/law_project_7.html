@@ -1,0 +1,94 @@
+<div class="row">
+  <div class="col-md-8">
+    <h3>Autoriza o Poder Executivo a criar o Programa "Vida em Família" e dá outras providências</h3>
+    <p>
+      O Projeto de Lei que apresento para apreciação desta Casa teve origem no 
+Estado do Rio de Janeiro, onde já é lei. A norma projetada tem como objetivo criar 
+um auxílio financeiro ao servidor público que adotar uma criança ou adolescente, 
+denominado VIDA EM FAMÍLIA  
+    
+    </p>  
+	<p>
+	O projeto prevê o pagamento de ajudas de custo de dois a cinco salários 
+mínimos aos servidores federais, estaduais civis ou militares; ativos ou inativos - que 
+mantenham o jovem até que ele complete 21 anos, sob a sua responsabilidade, na 
+forma abaixo detalhada. 
+    </p>  
+	<p>
+	O auxílio pode ser estendido até os 24 anos do adotado, desde que seja 
+comprovado seu ingresso em um curso de nível superior. O acompanhamento dos 
+jovens será feito pelo Juizado da Infância e Juventude, que também fará a seleção 
+das famílias candidatas à adoção. 
+
+    </p>  
+	<p>
+	O projeto, prevê uma ajuda de custo de três salários mínimos a funcionários 
+que adotarem crianças entre 5 e 8 anos e de quatro salários mínimos no caso de 
+adoção de meninos e meninas com mais de 8 a 12 anos. 
+    </p>  
+	<p>
+	A ajuda de custo será de cinco salários mínimos para quem adotar jovens com 
+idade acima de 12 a 18 anos ou crianças e adolescentes portadores de deficiência 
+física ou do vírus HIV. 
+
+    </p> 
+    <p>
+      <i>Autora: </i><b>GIOVANI CHERINI</b>   
+    </p> 
+    <p>
+      <i>Categoria: </i><b>Familia, Saude,  Pessoal</b>   
+    </p> 
+    
+    <div id="graph"></div>
+    
+    <a href="http://www.camara.gov.br/proposicoesWeb/prop_mostrarintegra?codteor=1089259&filename=PL+5590/2013">Fonte completa da informação</a>
+  </div>
+  <div class="col-md-4">
+    <div class="section">
+      <img src="images/familia.jpg" class="img-responsive">  
+    </div>
+    
+    <div class="well">
+      <h4>Votar</h4>
+      <div class="form-group">
+        <button type="button" class="btn btn-primary btn-lg">Acordo</button>
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn btn-primary btn-lg">Discordo</button>
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn btn-primary btn-lg">Abstenção</button>
+      </div>  
+    </div>
+    
+    <div class="well">
+      <h4>Votaçoes do parlamento</h4>
+      <div class="form-group">
+        <button id="view_parliament_votes" type="button" class="btn btn-primary btn-lg">Votaçoes</button>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+
+  $(document).ready(function() {
+    Morris.Donut({
+      element: 'graph',
+      data: [
+        {value: 45, label: 'Acorda'},
+        {value: 45, label: 'Discorda'},
+        {value: 10, label: 'Abstenção'}
+      ],
+        formatter: function (x) { return x + "%"}
+      }).on('click', function(i, row){
+        console.log(i, row);
+      });
+    
+    $("#view_parliament_votes").click(function(){
+      get_page("parliament_votes");
+    });
+  });
+  
+</script>

@@ -1,0 +1,106 @@
+<div class="row">
+  <div class="col-md-8">
+    <h3>Incluir a Organização Social e Política do Brasil e a Educação Moral e Cívica como disciplinas obrigatórias no ensino fundamental e médio</h3>
+    
+	<p>
+	Todas as grandes nações do planeta cultivam, em 
+alguma medida, um sentimento de respeito, amor e dedicação à pátria, 
+sentimento este que constitui fator de união e de identificação cultural do seu 
+povo.
+    </p>  
+	<p>
+	No Brasil, desde o fim do Império, o debate acerca da 
+importância da formação cívica e moral dos estudantes, relacionada ao valor 
+do trabalho para o engrandecimento do cidadão e da pátria, sempre esteve 
+presente nos meios intelectuais, tendo sido inserido na educação escolar 
+durante o período republicano. 
+
+    </p>  
+	<p>
+	Na década de 1960, durante o regime militar, foram 
+instituídas as disciplinas de Educação Moral e Cívica, em todos os níveis e 
+modalidades de ensino, e de Organização Social e Política do Brasil, no ensino 
+de segundo grau científico e profissionalizante – a primeira relacionada aos 
+valores de segurança nacional, de fortalecimento do Estado e de 
+desenvolvimento econômico do país; e a segunda como afirmação dos projetos 
+de sociedade e de Estado que se buscava instituir.
+    </p>  
+	<p>
+	Vinculadas ao nacionalismo exacerbado do regime militar 
+e à repressão e, equivocadamente, consideradas símbolos da ditadura nas 
+escolas e universidades, essas disciplinas foram eliminadas definitivamente 
+dos currículos em 1993. Porém, as discussões sobre o papel da formação para 
+a cidadania e a prática democrática ainda são assuntos presentes na imprensa, 
+nos meios políticos e nas universidades até os dias de hoje. 
+
+    </p>  
+	<p>
+	Tendo em vista os problemas que afligem nossa 
+sociedade nos tempos atuais, como a falta de segurança, a violência, o uso de 
+drogas, os desvios de comportamento e a falta de solidariedade e de respeito 
+com o próximo, consideramos de fundamental importância a inserção, na 
+formação dos nossos jovens cidadãos, dos conhecimentos e regras 
+necessários à vida pacífica, legal, ética, moralmente correta e adequada dentro 
+do convívio social, ou seja, disseminar a cultura da paz. 
+
+    </p> 
+    <p>
+      <i>Autor: </i><b>VALTENIR LUIZ PEREIRA</b>   
+    </p> 
+    <p>
+      <i>Categoria: </i><b>Familia, Educação,  Pessoal</b>   
+    </p> 
+    
+    <div id="graph"></div>
+    
+    <a href="http://www.camara.gov.br/proposicoesWeb/prop_mostrarintegra?codteor=1110043&filename=PL+5960/2013">Fonte completa da informação</a>
+  </div>
+  <div class="col-md-4">
+    <div class="section">
+      <img src="images/civica.jpg" class="img-responsive">  
+    </div>
+    
+    <div class="well">
+      <h4>Votar</h4>
+      <div class="form-group">
+        <button type="button" class="btn btn-primary btn-lg">Acordo</button>
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn btn-primary btn-lg">Discordo</button>
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn btn-primary btn-lg">Abstenção</button>
+      </div>  
+    </div>
+    
+    <div class="well">
+      <h4>Votaçoes do parlamento</h4>
+      <div class="form-group">
+        <button id="view_parliament_votes" type="button" class="btn btn-primary btn-lg">Votaçoes</button>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+
+  $(document).ready(function() {
+    Morris.Donut({
+      element: 'graph',
+      data: [
+        {value: 45, label: 'Acorda'},
+        {value: 45, label: 'Discorda'},
+        {value: 10, label: 'Abstenção'}
+      ],
+        formatter: function (x) { return x + "%"}
+      }).on('click', function(i, row){
+        console.log(i, row);
+      });
+    
+    $("#view_parliament_votes").click(function(){
+      get_page("parliament_votes");
+    });
+  });
+  
+</script>

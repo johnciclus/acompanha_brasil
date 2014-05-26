@@ -1,0 +1,76 @@
+<div class="row">
+  <div class="col-md-8">
+    <h3>Acolhimento de crianças e adolescentes afastados do convívio familiar por decisão judicial</h3>
+    <p>
+      A obrigação legal constitucional ( artigo 227 da Constituição Federal  -  CF )  de garantir  às crianças  e adolescentes afastadas, temporariamente, do convívio familiar natural  (pais), por decisão judicial, motivada pela situação de risco, perigo ou de vulnerabilidade social e/ou familiar,  exige alternativas de acolhimento, como expressamente dispõe o artigo 101 do Estatuto da Criança e do Adolescente –ECA.   
+    </p>  
+	<p>
+	Tem-se a verificado que, ao lado ao alto custo financeiro ( em São Paulo – Capital – R$ 2.900,00, por acolhido )  da criança ou adolescente em instituições ( abrigos ), o afastamento do convívio familiar, conquanto as visitas dos parentes sejam a regra, traz sofrimento psicológico e social às crianças e adolescentes, que se sentem rejeitados pela família, sobretudo, quando a extensa ( avós e tios ), não consegue assumi-los, até que os pais se reorganizem.
+    </p>  
+	<p>
+	Um dos motivos que impede a criança ou o adolescente de ficar com a família alargada, tem sido a falta de recursos materiais e, principalmente, financeiros ( rendimentos ) dos parentes que se encontram, por isso,  impossibilitados de assumir a guarda de netos ou sobrinhos.
+    </p>  
+	<p>
+	O Plano Nacional de Promoção, Proteção e Defesa do Direito de Crianças e Adolescentes à Convivência Familiar e Comunitária ( Presidência da República – Secretaria Especial de Direitos Humanos – Ministério do Desenvolvimento Social e Combate à Fome- 2006 ) propõe a ruptura com a cultura da institucionalização de crianças e adolescentes e fortalece o paradigma da proteção integral ( artigo 4º,  do Eca ) e da preservação dos vínculos familiares e comunitários, garantindo não só os vínculos das obrigações mútuas que toda família tem, mas dando ênfase àquelas de caráter simbólico e afetivo.
+    </p>  
+	
+    <p>
+      <i>Autora: </i><b>PAULO ROBERTO FREIRE DA COSTA</b>   
+    </p> 
+    <p>
+      <i>Categoria: </i><b>Familia, Pessoal</b>   
+    </p> 
+    
+    <div id="graph"></div>
+    
+    <a href="http://www.camara.gov.br/proposicoesWeb/prop_mostrarintegra?codteor=1224348&filename=PL+7047/2014">Fonte completa da informação</a>
+  </div>
+  <div class="col-md-4">
+    <div class="section">
+      <img src="images/afastado.jpg" class="img-responsive">  
+    </div>
+    
+    <div class="well">
+      <h4>Votar</h4>
+      <div class="form-group">
+        <button type="button" class="btn btn-primary btn-lg">Acordo</button>
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn btn-primary btn-lg">Discordo</button>
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn btn-primary btn-lg">Abstenção</button>
+      </div>  
+    </div>
+    
+    <div class="well">
+      <h4>Votaçoes do parlamento</h4>
+      <div class="form-group">
+        <button id="view_parliament_votes" type="button" class="btn btn-primary btn-lg">Votaçoes</button>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+
+  $(document).ready(function() {
+    Morris.Donut({
+      element: 'graph',
+      data: [
+        {value: 45, label: 'Acorda'},
+        {value: 45, label: 'Discorda'},
+        {value: 10, label: 'Abstenção'}
+      ],
+        formatter: function (x) { return x + "%"}
+      }).on('click', function(i, row){
+        console.log(i, row);
+      });
+    
+    $("#view_parliament_votes").click(function(){
+      get_page("parliament_votes");
+    });
+  });
+  
+</script>
