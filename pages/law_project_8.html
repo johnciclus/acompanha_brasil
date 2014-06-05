@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-8">
-    <h3>Existência de repositórios digitais nas instituições federais de educação superior e de pesquisa, para gestão e disseminação de sua produção científica, técnica e artística</h3>
+    <h3 class="centered">Existência de repositórios digitais nas instituições federais de educação superior e de pesquisa, para gestão e disseminação de sua produção científica, técnica e artística</h3>
     <p>
       Inúmeras instituições de educação superior e de pesquisa 
 já mantêm repositórios institucionais digitais para gestão e disseminação de 
@@ -36,9 +36,7 @@ importante atividade.
     <p>
       <i>Categoria: </i><b>Familia, Educação,  Pessoal</b>   
     </p> 
-    
-    <div id="graph"></div>
-    
+        
     <a href="http://www.camara.gov.br/proposicoesWeb/prop_mostrarintegra?codteor=1175962&filename=PL+6702/2013">Fonte completa da informação</a>
   </div>
   <div class="col-md-4">
@@ -46,7 +44,7 @@ importante atividade.
       <img src="images/repo.jpg" class="img-responsive">  
     </div>
     
-    <div class="well">
+    <div id="votes" class="well">
       <h4>Votar</h4>
       <div class="form-group">
         <button type="button" class="btn btn-primary btn-lg">Acordo</button>
@@ -72,17 +70,20 @@ importante atividade.
 <script type="text/javascript">
 
   $(document).ready(function() {
-    Morris.Donut({
-      element: 'graph',
-      data: [
-        {value: 45, label: 'Acorda'},
-        {value: 45, label: 'Discorda'},
-        {value: 10, label: 'Abstenção'}
-      ],
-        formatter: function (x) { return x + "%"}
-      }).on('click', function(i, row){
-        console.log(i, row);
-      });
+    $("#votes button").click(function(){
+      $("#votes").html("<h4>Votaçoes do povo</h4><div id='graph'></div>");
+      Morris.Donut({
+        element: 'graph',
+        data: [
+          {value: 45, label: 'Acorda'},
+          {value: 45, label: 'Discorda'},
+          {value: 10, label: 'Abstenção'}
+        ],
+          formatter: function (x) { return x + "%"}
+        }).on('click', function(i, row){
+          console.log(i, row);
+        });
+    });
     
     $("#view_parliament_votes").click(function(){
       get_page("parliament_votes");

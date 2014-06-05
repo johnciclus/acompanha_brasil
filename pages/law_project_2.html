@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-8">
-    <h3>Institui a meia-entrada em eventos públicos 
+    <h3 class="centered">Institui a meia-entrada em eventos públicos 
 de cultura, esporte e lazer para doadores 
 regulares de sangue, e dá outras providências</h3>
     <p>
@@ -58,8 +58,6 @@ voluntária de sangue
       <i>Categoria: </i><b>Saude,  Pessoal</b>   
     </p> 
     
-    <div id="graph"></div>
-    
     <a href="http://www.camara.gov.br/proposicoesWeb/prop_mostrarintegra?codteor=1236328&filename=PL+7254/2014">Fonte completa da informação</a>
   </div>
   <div class="col-md-4">
@@ -67,7 +65,7 @@ voluntária de sangue
       <img src="images/sangue.jpg" class="img-responsive">  
     </div>
     
-    <div class="well">
+    <div id="votes" class="well">
       <h4>Votar</h4>
       <div class="form-group">
         <button type="button" class="btn btn-primary btn-lg">Acordo</button>
@@ -93,17 +91,20 @@ voluntária de sangue
 <script type="text/javascript">
 
   $(document).ready(function() {
-    Morris.Donut({
-      element: 'graph',
-      data: [
-        {value: 45, label: 'Acorda'},
-        {value: 45, label: 'Discorda'},
-        {value: 10, label: 'Abstenção'}
-      ],
-        formatter: function (x) { return x + "%"}
-      }).on('click', function(i, row){
-        console.log(i, row);
-      });
+    $("#votes button").click(function(){
+      $("#votes").html("<h4>Votaçoes do povo</h4><div id='graph'></div>");
+      Morris.Donut({
+        element: 'graph',
+        data: [
+          {value: 45, label: 'Acorda'},
+          {value: 45, label: 'Discorda'},
+          {value: 10, label: 'Abstenção'}
+        ],
+          formatter: function (x) { return x + "%"}
+        }).on('click', function(i, row){
+          console.log(i, row);
+        });
+    });
     
     $("#view_parliament_votes").click(function(){
       get_page("parliament_votes");

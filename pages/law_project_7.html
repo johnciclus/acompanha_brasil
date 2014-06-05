@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-8">
-    <h3>Autoriza o Poder Executivo a criar o Programa "Vida em Família" e dá outras providências</h3>
+    <h3 class="centered">Autoriza o Poder Executivo a criar o Programa "Vida em Família" e dá outras providências</h3>
     <p>
       O Projeto de Lei que apresento para apreciação desta Casa teve origem no 
 Estado do Rio de Janeiro, onde já é lei. A norma projetada tem como objetivo criar 
@@ -38,9 +38,7 @@ física ou do vírus HIV.
     <p>
       <i>Categoria: </i><b>Familia, Saude,  Pessoal</b>   
     </p> 
-    
-    <div id="graph"></div>
-    
+        
     <a href="http://www.camara.gov.br/proposicoesWeb/prop_mostrarintegra?codteor=1089259&filename=PL+5590/2013">Fonte completa da informação</a>
   </div>
   <div class="col-md-4">
@@ -48,7 +46,7 @@ física ou do vírus HIV.
       <img src="images/familia.jpg" class="img-responsive">  
     </div>
     
-    <div class="well">
+    <div id="votes" class="well">
       <h4>Votar</h4>
       <div class="form-group">
         <button type="button" class="btn btn-primary btn-lg">Acordo</button>
@@ -74,17 +72,20 @@ física ou do vírus HIV.
 <script type="text/javascript">
 
   $(document).ready(function() {
-    Morris.Donut({
-      element: 'graph',
-      data: [
-        {value: 45, label: 'Acorda'},
-        {value: 45, label: 'Discorda'},
-        {value: 10, label: 'Abstenção'}
-      ],
-        formatter: function (x) { return x + "%"}
-      }).on('click', function(i, row){
-        console.log(i, row);
-      });
+    $("#votes button").click(function(){
+      $("#votes").html("<h4>Votaçoes do povo</h4><div id='graph'></div>");
+      Morris.Donut({
+        element: 'graph',
+        data: [
+          {value: 45, label: 'Acorda'},
+          {value: 45, label: 'Discorda'},
+          {value: 10, label: 'Abstenção'}
+        ],
+          formatter: function (x) { return x + "%"}
+        }).on('click', function(i, row){
+          console.log(i, row);
+        });
+    });
     
     $("#view_parliament_votes").click(function(){
       get_page("parliament_votes");

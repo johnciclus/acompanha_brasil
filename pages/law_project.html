@@ -50,9 +50,7 @@
     <p>
       <i>Categoria: </i><b>Familia, Saude,  Pessoal</b>   
     </p> 
-    
-    <div id="graph"></div>
-    
+        
     <a href="#">Fonte completa da informação</a>
   </div>
   <div class="col-md-4">
@@ -60,7 +58,7 @@
       <img src="images/childrens.jpg" class="img-responsive">  
     </div>
     
-    <div class="well">
+    <div id="votes" class="well">
       <h4>Votar</h4>
       <div class="form-group">
         <button type="button" class="btn btn-primary btn-lg">Acordo</button>
@@ -86,17 +84,20 @@
 <script type="text/javascript">
 
   $(document).ready(function() {
-    Morris.Donut({
-      element: 'graph',
-      data: [
-        {value: 45, label: 'Acorda'},
-        {value: 45, label: 'Discorda'},
-        {value: 10, label: 'Abstenção'}
-      ],
-        formatter: function (x) { return x + "%"}
-      }).on('click', function(i, row){
-        console.log(i, row);
-      });
+    $("#votes button").click(function(){
+      $("#votes").html("<h4>Votaçoes do povo</h4><div id='graph'></div>");
+      Morris.Donut({
+        element: 'graph',
+        data: [
+          {value: 45, label: 'Acorda'},
+          {value: 45, label: 'Discorda'},
+          {value: 10, label: 'Abstenção'}
+        ],
+          formatter: function (x) { return x + "%"}
+        }).on('click', function(i, row){
+          console.log(i, row);
+        });
+    });
     
     $("#view_parliament_votes").click(function(){
       get_page("parliament_votes");
