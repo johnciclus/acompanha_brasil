@@ -1,4 +1,9 @@
 <div class="row">
+  <ol class="breadcrumb">
+    <li><a href="#home">Home</a></li>
+    <li>Projetos de lei</li>
+    <li class="active">Projeto 0000</li>
+  </ol>
   <div class="col-md-8">
     <h3 class="centered">Institui a Política de Atenção Integral à Saúde do Homem</h3>
     <p>
@@ -26,6 +31,10 @@ população masculina.
     <a href="http://www.camara.gov.br/proposicoesWeb/prop_mostrarintegra?codteor=1157893&filename=PL+6568/2013">Fonte completa da informação</a>
   </div>
   <div class="col-md-4">
+    <div class="form-group">
+        <button id="favorite_project" type="button" class="btn btn-success btn-lg btn-vote"><span class="glyphicon glyphicon-star-empty"></span> Projeto favorito</button>
+      </div>
+    
     <div class="section">
       <img src="images/saudeHomem.jpg" class="img-responsive">  
     </div>
@@ -33,22 +42,21 @@ população masculina.
     <div id="votes" class="well">
       <h4>Votar</h4>
       <div class="form-group">
-        <button type="button" class="btn btn-primary btn-lg">Acordo</button>
+        <button type="button" class="btn btn-primary btn-lg btn-vote"><span class="glyphicon glyphicon-ok"></span> Acordo</button>
       </div>
       <div class="form-group">
-        <button type="button" class="btn btn-primary btn-lg">Discordo</button>
+        <button type="button" class="btn btn-primary btn-lg btn-vote"><span class="glyphicon glyphicon-remove"></span> Discordo</button>
       </div>
       <div class="form-group">
-        <button type="button" class="btn btn-primary btn-lg">Abstenção</button>
+        <button type="button" class="btn btn-primary btn-lg btn-vote"><span class="glyphicon glyphicon-pushpin"></span> Abstenção</button>
       </div>  
     </div>
     
     <div class="well">
       <h4>Votaçoes do parlamento</h4>
       <div class="form-group">
-        <button id="view_parliament_votes" type="button" class="btn btn-primary btn-lg">Votaçoes</button>
+        <button id="view_parliament_votes" type="button" class="btn btn-primary btn-lg btn-vote">Votaçoes</button>
       </div>
-      
     </div>
   </div>
 </div>

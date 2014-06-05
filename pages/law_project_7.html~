@@ -1,50 +1,49 @@
 <div class="row">
-  <ol class="breadcrumb">
-    <li><a href="#home">Home</a></li>
-    <li>Projetos de lei</li>
-    <li class="active">Projeto 0000</li>
-  </ol>
   <div class="col-md-8">
-    <h3>Medidas de  proteção  de crianças e adolescentes</h3>
+    <h3 class="centered">Autoriza o Poder Executivo a criar o Programa "Vida em Família" e dá outras providências</h3>
+    <p>
+      O Projeto de Lei que apresento para apreciação desta Casa teve origem no 
+Estado do Rio de Janeiro, onde já é lei. A norma projetada tem como objetivo criar 
+um auxílio financeiro ao servidor público que adotar uma criança ou adolescente, 
+denominado VIDA EM FAMÍLIA  
     
+    </p>  
 	<p>
-	Exame Nacional do Ensino Médio (Enem), definido 
-em regulamento, será garantido de forma progressiva a todos os 
-concluintes do ensino médio, tornando-se obrigatório no âmbito do 
-sistema de avaliação do ensino médio, instituído pela União em 
-colaboração com os sistemas de ensino, conforme estabelecem o 
-art. 211 da Constituição Federal e o inciso VI do art. 9º desta Lei. 
+	O projeto prevê o pagamento de ajudas de custo de dois a cinco salários 
+mínimos aos servidores federais, estaduais civis ou militares; ativos ou inativos - que 
+mantenham o jovem até que ele complete 21 anos, sob a sua responsabilidade, na 
+forma abaixo detalhada. 
+    </p>  
+	<p>
+	O auxílio pode ser estendido até os 24 anos do adotado, desde que seja 
+comprovado seu ingresso em um curso de nível superior. O acompanhamento dos 
+jovens será feito pelo Juizado da Infância e Juventude, que também fará a seleção 
+das famílias candidatas à adoção. 
 
     </p>  
 	<p>
-	A instituição de ensino que participar do Enem, ao longo 
-do seu processo de universalização, não poderá estabelecer 
-critérios ou quaisquer outras formas de discriminação que 
-dificultem a participação de qualquer de seus alunos na realização 
-do referido exame.” (NR)
+	O projeto, prevê uma ajuda de custo de três salários mínimos a funcionários 
+que adotarem crianças entre 5 e 8 anos e de quatro salários mínimos no caso de 
+adoção de meninos e meninas com mais de 8 a 12 anos. 
     </p>  
 	<p>
-    </p>  
-	<p>
-    </p>  
-	<p>
+	A ajuda de custo será de cinco salários mínimos para quem adotar jovens com 
+idade acima de 12 a 18 anos ou crianças e adolescentes portadores de deficiência 
+física ou do vírus HIV. 
+
     </p> 
     <p>
-      <i>Autora: </i><b>Anibal Diniz</b>   
+      <i>Autora: </i><b>GIOVANI CHERINI</b>   
     </p> 
     <p>
-      <i>Categoria: </i><b> Educação,  Pessoal</b>   
+      <i>Categoria: </i><b>Familia, Saude,  Pessoal</b>   
     </p> 
         
-    <a href="http://www.camara.gov.br/proposicoesWeb/prop_mostrarintegra?codteor=1109407&filename=PL+5956/2013">Fonte completa da informação</a>
+    <a href="http://www.camara.gov.br/proposicoesWeb/prop_mostrarintegra?codteor=1089259&filename=PL+5590/2013">Fonte completa da informação</a>
   </div>
   <div class="col-md-4">
-    <div class="form-group">
-        <button id="favorite_project" type="button" class="btn btn-success btn-lg btn-vote"><span class="glyphicon glyphicon-star-empty"></span> Projeto favorito</button>
-      </div>
-    
     <div class="section">
-      <img src="images/enem.jpg" class="img-responsive">  
+      <img src="images/familia.jpg" class="img-responsive">  
     </div>
     
     <div id="votes" class="well">

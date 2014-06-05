@@ -1,9 +1,4 @@
 <div class="row">
-  <ol class="breadcrumb">
-    <li><a href="#home">Home</a></li>
-    <li>Projetos de lei</li>
-    <li class="active">Projeto 0000</li>
-  </ol>
   <div class="col-md-8">
     <h3 class="centered">Incluir a Organização Social e Política do Brasil e a Educação Moral e Cívica como disciplinas obrigatórias no ensino fundamental e médio</h3>
     
@@ -59,10 +54,6 @@ do convívio social, ou seja, disseminar a cultura da paz.
     <a href="http://www.camara.gov.br/proposicoesWeb/prop_mostrarintegra?codteor=1110043&filename=PL+5960/2013">Fonte completa da informação</a>
   </div>
   <div class="col-md-4">
-    <div class="form-group">
-        <button id="favorite_project" type="button" class="btn btn-success btn-lg btn-vote"><span class="glyphicon glyphicon-star-empty"></span> Projeto favorito</button>
-      </div>
-    
     <div class="section">
       <img src="images/civica.jpg" class="img-responsive">  
     </div>

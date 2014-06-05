@@ -1,50 +1,42 @@
 <div class="row">
-  <ol class="breadcrumb">
-    <li><a href="#home">Home</a></li>
-    <li>Projetos de lei</li>
-    <li class="active">Projeto 0000</li>
-  </ol>
   <div class="col-md-8">
-    <h3>Medidas de  proteção  de crianças e adolescentes</h3>
+    <h3 class="centered">Proibição da concessão de benefícios fiscais e financeiros públicos a pessoas físicas ou jurídicas que comercializem produtos adquiridos de fornecedores condenados com trânsito em julgado pela prática de trabalho escravo, crimes ambientais e também crimes contra a saúde pública</h3>
     
 	<p>
-	Exame Nacional do Ensino Médio (Enem), definido 
-em regulamento, será garantido de forma progressiva a todos os 
-concluintes do ensino médio, tornando-se obrigatório no âmbito do 
-sistema de avaliação do ensino médio, instituído pela União em 
-colaboração com os sistemas de ensino, conforme estabelecem o 
-art. 211 da Constituição Federal e o inciso VI do art. 9º desta Lei. 
+	O objetivo deste Projeto de Lei é estimular o cumprimento 
+voluntário da legislação trabalhista, ambiental e sanitária por parte de pessoas 
+físicas e jurídicas. 
 
     </p>  
 	<p>
-	A instituição de ensino que participar do Enem, ao longo 
-do seu processo de universalização, não poderá estabelecer 
-critérios ou quaisquer outras formas de discriminação que 
-dificultem a participação de qualquer de seus alunos na realização 
-do referido exame.” (NR)
+	Trata-se de uma medida de grande alcance social, que 
+tem potencial para desestimular o trabalho escravo, o cometimento de crimes 
+ambientais e a prática de crimes contra a saúde pública, constituindo-se, 
+assim, em importante pena acessória, com grande efeito pedagógico, 
+especialmente porque vai pesar no bolso dos infratores. 
+
     </p>  
 	<p>
+	Ante o exposto e tendo em vista a imensa relevância 
+dessa matéria para o cumprimento da legislação trabalhista, ambiental e 
+sanitária, gostaria de pedir o apoio dos nobres pares nesta Casa para a rápida 
+aprovação do Projeto de Lei em tela. 
+
     </p>  
-	<p>
-    </p>  
-	<p>
+	 
+    <p>
+      <i>Autora: </i><b>ANTÔNIO ROBERTO SOARES</b>   
     </p> 
     <p>
-      <i>Autora: </i><b>Anibal Diniz</b>   
-    </p> 
-    <p>
-      <i>Categoria: </i><b> Educação,  Pessoal</b>   
+      <i>Categoria: </i><b>Familia, Saude,  Pessoal</b>   
     </p> 
         
-    <a href="http://www.camara.gov.br/proposicoesWeb/prop_mostrarintegra?codteor=1109407&filename=PL+5956/2013">Fonte completa da informação</a>
+    <a href="http://www.camara.gov.br/proposicoesWeb/prop_mostrarintegra?codteor=1199567&filename=PL+6824/2013">Fonte completa da informação</a>
   </div>
   <div class="col-md-4">
-    <div class="form-group">
-        <button id="favorite_project" type="button" class="btn btn-success btn-lg btn-vote"><span class="glyphicon glyphicon-star-empty"></span> Projeto favorito</button>
-      </div>
-    
+  
     <div class="section">
-      <img src="images/enem.jpg" class="img-responsive">  
+      <img src="images/carcel.jpg" class="img-responsive">  
     </div>
     
     <div id="votes" class="well">

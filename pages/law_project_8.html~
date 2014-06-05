@@ -1,50 +1,47 @@
 <div class="row">
-  <ol class="breadcrumb">
-    <li><a href="#home">Home</a></li>
-    <li>Projetos de lei</li>
-    <li class="active">Projeto 0000</li>
-  </ol>
   <div class="col-md-8">
-    <h3>Medidas de  proteção  de crianças e adolescentes</h3>
-    
+    <h3 class="centered">Existência de repositórios digitais nas instituições federais de educação superior e de pesquisa, para gestão e disseminação de sua produção científica, técnica e artística</h3>
+    <p>
+      Inúmeras instituições de educação superior e de pesquisa 
+já mantêm repositórios institucionais digitais para gestão e disseminação de 
+sua produção científica e técnica. Mas ainda não se trata de prática 
+consolidada. Em alguns casos, os repositórios não são atualizados com a 
+periodicidade desejável. 
+  
+    </p>
+    <p>
+	O acesso a essa informação é indispensável para a 
+formação de pessoal de alto nível e para o desenvolvimento da investigação 
+científica e tecnológica no País. Representa também uma forma de retorno à 
+sociedade pelos elevados investimentos feitos com recursos públicos na 
+manutenção dessas instituições. 
+    </p>  
 	<p>
-	Exame Nacional do Ensino Médio (Enem), definido 
-em regulamento, será garantido de forma progressiva a todos os 
-concluintes do ensino médio, tornando-se obrigatório no âmbito do 
-sistema de avaliação do ensino médio, instituído pela União em 
-colaboração com os sistemas de ensino, conforme estabelecem o 
-art. 211 da Constituição Federal e o inciso VI do art. 9º desta Lei. 
+	Trata-se de meio privilegiado para promover o 
+intercâmbio científico e os necessários estudos sobre o estado da arte de cada 
+área do conhecimento no País. 
 
     </p>  
 	<p>
-	A instituição de ensino que participar do Enem, ao longo 
-do seu processo de universalização, não poderá estabelecer 
-critérios ou quaisquer outras formas de discriminação que 
-dificultem a participação de qualquer de seus alunos na realização 
-do referido exame.” (NR)
-    </p>  
-	<p>
-    </p>  
-	<p>
+	O Instituto Brasileiro de Informação em Ciência e 
+Tecnologia – IBICT já vem trabalhando, há tempos e com êxito, nessa direção. 
+O presente projeto de lei pretende dar maior suporte normativo a essa 
+importante atividade.
     </p>  
 	<p>
     </p> 
     <p>
-      <i>Autora: </i><b>Anibal Diniz</b>   
+      <i>Autora: </i><b>IRACEMA MARIA PORTELLA NUNES NOGUEIRA LIMA</b>   
     </p> 
     <p>
-      <i>Categoria: </i><b> Educação,  Pessoal</b>   
+      <i>Categoria: </i><b>Familia, Educação,  Pessoal</b>   
     </p> 
         
-    <a href="http://www.camara.gov.br/proposicoesWeb/prop_mostrarintegra?codteor=1109407&filename=PL+5956/2013">Fonte completa da informação</a>
+    <a href="http://www.camara.gov.br/proposicoesWeb/prop_mostrarintegra?codteor=1175962&filename=PL+6702/2013">Fonte completa da informação</a>
   </div>
   <div class="col-md-4">
-    <div class="form-group">
-        <button id="favorite_project" type="button" class="btn btn-success btn-lg btn-vote"><span class="glyphicon glyphicon-star-empty"></span> Projeto favorito</button>
-      </div>
-    
     <div class="section">
-      <img src="images/enem.jpg" class="img-responsive">  
+      <img src="images/repo.jpg" class="img-responsive">  
     </div>
     
     <div id="votes" class="well">

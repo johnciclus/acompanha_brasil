@@ -1,9 +1,4 @@
 <div class="row">
-  <ol class="breadcrumb">
-    <li><a href="#home">Home</a></li>
-    <li>Projetos de lei</li>
-    <li class="active">Projeto 0000</li>
-  </ol>
   <div class="col-md-8">
     <h3>Medidas de  proteção  de crianças e adolescentes</h3>
     
@@ -39,10 +34,6 @@ do referido exame.” (NR)
     <a href="http://www.camara.gov.br/proposicoesWeb/prop_mostrarintegra?codteor=1109407&filename=PL+5956/2013">Fonte completa da informação</a>
   </div>
   <div class="col-md-4">
-    <div class="form-group">
-        <button id="favorite_project" type="button" class="btn btn-success btn-lg btn-vote"><span class="glyphicon glyphicon-star-empty"></span> Projeto favorito</button>
-      </div>
-    
     <div class="section">
       <img src="images/enem.jpg" class="img-responsive">  
     </div>

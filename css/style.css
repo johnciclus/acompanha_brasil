@@ -69,6 +69,14 @@
     font-size: 16px;
   }
   
+  .sidebar-nav .navbar li a.submenu {
+    padding-left: 30px;
+  }  
+  
+  .highlight{
+    background-color: #fefefe;
+  }
+  
   .navbar{
     background-image: none;
     background-color: #f5f5f5;
@@ -130,6 +138,10 @@
   text-align: center;
 }
 
+.img-centered{
+  margin: 0 auto;
+}
+
 .no-margin{
   margin: 0px;
 }
@@ -149,9 +161,8 @@
   font-size: 18px;
 }
 
-.highlight{
-  padding-left: 30px;
-  background-color: #fff;
+.btn-vote{
+  width: 100%;
 }
 
 #myCarousel{

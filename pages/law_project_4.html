@@ -1,4 +1,9 @@
 <div class="row">
+  <ol class="breadcrumb">
+    <li><a href="#home">Home</a></li>
+    <li>Projetos de lei</li>
+    <li class="active">Projeto 0000</li>
+  </ol>
   <div class="col-md-8">
     <h3 class="centered">Proibição da concessão de benefícios fiscais e financeiros públicos a pessoas físicas ou jurídicas que comercializem produtos adquiridos de fornecedores condenados com trânsito em julgado pela prática de trabalho escravo, crimes ambientais e também crimes contra a saúde pública</h3>
     
@@ -34,6 +39,10 @@ aprovação do Projeto de Lei em tela.
     <a href="http://www.camara.gov.br/proposicoesWeb/prop_mostrarintegra?codteor=1199567&filename=PL+6824/2013">Fonte completa da informação</a>
   </div>
   <div class="col-md-4">
+    <div class="form-group">
+        <button id="favorite_project" type="button" class="btn btn-success btn-lg btn-vote"><span class="glyphicon glyphicon-star-empty"></span> Projeto favorito</button>
+      </div>
+    
     <div class="section">
       <img src="images/carcel.jpg" class="img-responsive">  
     </div>
@@ -41,22 +50,21 @@ aprovação do Projeto de Lei em tela.
     <div id="votes" class="well">
       <h4>Votar</h4>
       <div class="form-group">
-        <button type="button" class="btn btn-primary btn-lg">Acordo</button>
+        <button type="button" class="btn btn-primary btn-lg btn-vote"><span class="glyphicon glyphicon-ok"></span> Acordo</button>
       </div>
       <div class="form-group">
-        <button type="button" class="btn btn-primary btn-lg">Discordo</button>
+        <button type="button" class="btn btn-primary btn-lg btn-vote"><span class="glyphicon glyphicon-remove"></span> Discordo</button>
       </div>
       <div class="form-group">
-        <button type="button" class="btn btn-primary btn-lg">Abstenção</button>
+        <button type="button" class="btn btn-primary btn-lg btn-vote"><span class="glyphicon glyphicon-pushpin"></span> Abstenção</button>
       </div>  
     </div>
     
     <div class="well">
       <h4>Votaçoes do parlamento</h4>
       <div class="form-group">
-        <button id="view_parliament_votes" type="button" class="btn btn-primary btn-lg">Votaçoes</button>
+        <button id="view_parliament_votes" type="button" class="btn btn-primary btn-lg btn-vote">Votaçoes</button>
       </div>
-      
     </div>
   </div>
 </div>

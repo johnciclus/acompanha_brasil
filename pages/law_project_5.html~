@@ -1,50 +1,33 @@
 <div class="row">
-  <ol class="breadcrumb">
-    <li><a href="#home">Home</a></li>
-    <li>Projetos de lei</li>
-    <li class="active">Projeto 0000</li>
-  </ol>
   <div class="col-md-8">
-    <h3>Medidas de  proteção  de crianças e adolescentes</h3>
-    
+    <h3 class="centered">Institui a Política de Atenção Integral à Saúde do Homem</h3>
+    <p>
+      É instituída em caráter permanente, no âmbito do Sistema Único de Saúde 
+(SUS), a Política de Atenção Integral à Saúde do Homem, a ser formulada, implementada e 
+mantida pelas diversas instâncias gestoras do Sistema. 
+ 
+    </p>
+      
 	<p>
-	Exame Nacional do Ensino Médio (Enem), definido 
-em regulamento, será garantido de forma progressiva a todos os 
-concluintes do ensino médio, tornando-se obrigatório no âmbito do 
-sistema de avaliação do ensino médio, instituído pela União em 
-colaboração com os sistemas de ensino, conforme estabelecem o 
-art. 211 da Constituição Federal e o inciso VI do art. 9º desta Lei. 
+	A Política de Atenção Integral à Saúde do Homem deverá abranger, entre 
+outras ações definidas em regulamento, a prevenção, a detecção precoce, o diagnóstico e o 
+tratamento de doenças e agravos à saúde que acometam exclusiva ou predominantemente a 
+população masculina. 
 
     </p>  
-	<p>
-	A instituição de ensino que participar do Enem, ao longo 
-do seu processo de universalização, não poderá estabelecer 
-critérios ou quaisquer outras formas de discriminação que 
-dificultem a participação de qualquer de seus alunos na realização 
-do referido exame.” (NR)
-    </p>  
-	<p>
-    </p>  
-	<p>
-    </p>  
-	<p>
+	
+    <p>
+      <i>Autora: </i><b>Angela Maria Gomes Portela</b>   
     </p> 
     <p>
-      <i>Autora: </i><b>Anibal Diniz</b>   
+      <i>Categoria: </i><b>Familia, Pessoal</b>   
     </p> 
-    <p>
-      <i>Categoria: </i><b> Educação,  Pessoal</b>   
-    </p> 
-        
-    <a href="http://www.camara.gov.br/proposicoesWeb/prop_mostrarintegra?codteor=1109407&filename=PL+5956/2013">Fonte completa da informação</a>
+    
+    <a href="http://www.camara.gov.br/proposicoesWeb/prop_mostrarintegra?codteor=1157893&filename=PL+6568/2013">Fonte completa da informação</a>
   </div>
   <div class="col-md-4">
-    <div class="form-group">
-        <button id="favorite_project" type="button" class="btn btn-success btn-lg btn-vote"><span class="glyphicon glyphicon-star-empty"></span> Projeto favorito</button>
-      </div>
-    
     <div class="section">
-      <img src="images/enem.jpg" class="img-responsive">  
+      <img src="images/saudeHomem.jpg" class="img-responsive">  
     </div>
     
     <div id="votes" class="well">

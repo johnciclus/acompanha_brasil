@@ -1,9 +1,4 @@
 <div class="row">
-  <ol class="breadcrumb">
-    <li><a href="#home">Home</a></li>
-    <li>Projetos de lei</li>
-    <li class="active">Projeto 0000</li>
-  </ol>
   <div class="col-md-8">
     <h3 class="centered">Acolhimento de crianças e adolescentes afastados do convívio familiar por decisão judicial</h3>
     <p>
@@ -29,10 +24,6 @@
     <a href="http://www.camara.gov.br/proposicoesWeb/prop_mostrarintegra?codteor=1224348&filename=PL+7047/2014">Fonte completa da informação</a>
   </div>
   <div class="col-md-4">
-    <div class="form-group">
-        <button id="favorite_project" type="button" class="btn btn-success btn-lg btn-vote"><span class="glyphicon glyphicon-star-empty"></span> Projeto favorito</button>
-      </div>
-    
     <div class="section">
       <img src="images/afastado.jpg" class="img-responsive">  
     </div>
