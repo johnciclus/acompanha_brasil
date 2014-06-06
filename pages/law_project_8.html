@@ -46,7 +46,7 @@ importante atividade.
   </div>
   <div class="col-md-4">
     <div class="form-group">
-        <button id="favorite_project" type="button" class="btn btn-success btn-lg btn-vote"><span class="glyphicon glyphicon-star-empty"></span> Projeto favorito</button>
+        <button id="favorite_project" type="button" class="btn btn-primary btn-lg btn-vote"><span class="glyphicon glyphicon-star-empty"></span> Projeto favorito</button>
       </div>
     
     <div class="section">
@@ -56,14 +56,20 @@ importante atividade.
     <div id="votes" class="well">
       <h4>Votar</h4>
       <div class="form-group">
-        <button type="button" class="btn btn-primary btn-lg btn-vote"><span class="glyphicon glyphicon-ok"></span> Acordo</button>
+        <button type="button" class="btn btn-primary btn-lg btn-vote" data-toggle="modal" data-target="#voteModal">
+          <span class="glyphicon glyphicon-ok"></span> Acordo
+        </button>
       </div>
       <div class="form-group">
-        <button type="button" class="btn btn-primary btn-lg btn-vote"><span class="glyphicon glyphicon-remove"></span> Discordo</button>
+        <button type="button" class="btn btn-primary btn-lg btn-vote" data-toggle="modal" data-target="#voteModal">
+          <span class="glyphicon glyphicon-remove"></span> Discordo
+        </button>
       </div>
       <div class="form-group">
-        <button type="button" class="btn btn-primary btn-lg btn-vote"><span class="glyphicon glyphicon-pushpin"></span> Abstenção</button>
-      </div>  
+        <button type="button" class="btn btn-primary btn-lg btn-vote" data-toggle="modal" data-target="#voteModal">
+          <span class="glyphicon glyphicon-pushpin"></span> Abstenção
+        </button>
+      </div> 
     </div>
     
     <div class="well">
@@ -75,27 +81,23 @@ importante atividade.
   </div>
 </div>
 
-<script type="text/javascript">
+<!-- Modal -->
+<div class="modal fade" id="voteModal" tabindex="-1" role="dialog" aria-labelledby="voteModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="voteModalLabel">Confirmação</h4>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+        <button id="acept_vote" type="button" class="btn btn-primary">Aceitar</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-  $(document).ready(function() {
-    $("#votes button").click(function(){
-      $("#votes").html("<h4>Votaçoes do povo</h4><div id='graph'></div>");
-      Morris.Donut({
-        element: 'graph',
-        data: [
-          {value: 45, label: 'Acorda'},
-          {value: 45, label: 'Discorda'},
-          {value: 10, label: 'Abstenção'}
-        ],
-          formatter: function (x) { return x + "%"}
-        }).on('click', function(i, row){
-          console.log(i, row);
-        });
-    });
-    
-    $("#view_parliament_votes").click(function(){
-      get_page("parliament_votes");
-    });
-  });
-  
-</script>
+<script src="js/law-project.js"></script>
