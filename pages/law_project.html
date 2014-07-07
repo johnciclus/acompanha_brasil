@@ -69,13 +69,13 @@
     <div id="votes" class="well">
       <h4>Votar</h4>
       <div class="form-group">
-        <button type="button" class="btn btn-primary btn-lg btn-vote"><span class="glyphicon glyphicon-ok"></span> Acordo</button>
+        <button type="button" class="btn btn-primary btn-lg btn-vote"><span class="glyphicon glyphicon-ok"></span> Concordo</button>
       </div>
       <div class="form-group">
         <button type="button" class="btn btn-primary btn-lg btn-vote"><span class="glyphicon glyphicon-remove"></span> Discordo</button>
       </div>
       <div class="form-group">
-        <button type="button" class="btn btn-primary btn-lg btn-vote"><span class="glyphicon glyphicon-pushpin"></span> Abstenção</button>
+        <button type="button" class="btn btn-primary btn-lg btn-vote"><span class="glyphicon glyphicon-pushpin"></span> Branco</button>
       </div>  
     </div>
     
@@ -92,13 +92,13 @@
 
   $(document).ready(function() {
     $("#votes button").click(function(){
-      $("#votes").html("<h4>Votaçoes do povo</h4><div id='graph'></div>");
+      $("#votes").html("<h4>Votação  popular</h4><div id='graph'></div>");
       Morris.Donut({
         element: 'graph',
         data: [
-          {value: 45, label: 'Acorda'},
-          {value: 45, label: 'Discorda'},
-          {value: 10, label: 'Abstenção'}
+          {value: 45, label: 'Concordam'},
+          {value: 45, label: 'Discordam'},
+          {value: 10, label: 'Branco'}
         ],
           formatter: function (x) { return x + "%"}
         }).on('click', function(i, row){

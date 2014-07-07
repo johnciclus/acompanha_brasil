@@ -24,13 +24,13 @@ $(document).ready(function() {
     
     $("#acept_vote").click(function(){
       $("#voteModal").modal('hide');
-      $("#votes").html("<h4>Votaçoes do povo</h4><div id='graph'></div>");
+      $("#votes").html("<h4>Votação  popular</h4><div id='graph'></div>");
       Morris.Donut({
         element: 'graph',
         data: [
-          {value: 45, label: 'Acorda'},
-          {value: 45, label: 'Discorda'},
-          {value: 10, label: 'Abstenção'}
+          {value: 45, label: 'Concordam'},
+          {value: 45, label: 'Discordam'},
+          {value: 10, label: 'Branco'}
         ],
           formatter: function (x) { return x + "%"}
         }).on('click', function(i, row){
